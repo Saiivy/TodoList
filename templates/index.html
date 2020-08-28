@@ -1,0 +1,25 @@
+{%extends "layout.html"%}
+{%block body%}
+<div class="container">
+<form action="/task" method="POST">
+    <div class="text">
+    <input type="text" name="nameOfTask"  placeholder="Name Of Task">
+</div>
+<div class="submit">
+    <input type="submit" value="Submit">
+</div>
+</div>
+</form>
+    <h5><a class="delteLink" href='/task/deleteAll'> Delete Task</a></li>
+<div class="w3-container">
+<ul class="w3-ul w3-card" style="width:10%">
+    {%for k,v in taskName:%}
+    <li> {{v}} </li>
+    </ul>
+</div>
+
+{%endfor%}
+    
+    </h5>
+</ul>
+{%endblock%}
